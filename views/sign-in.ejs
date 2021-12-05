@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <title>City Wheels Driving School</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <img src="/public/images/logo2.png" alt="City wheels logo" />
+        </div>
+        <div class="site-name">
+          <h1>City Wheels Driving School</h1>
+          <p>Federal Road Safety Approved</p>
+        </div>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="/sign-in">SIGN-IN</a></li>
+            <li><a href="/">ENROLL</a></li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <div class="main-container">
+          <div>
+            <h2 class="title-of-job">Sign In to View Dashboard</h2>
+          </div>
+          <div class="admin-container">
+            <form action="/login" method="POST">
+              <div class="item">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  name="username"
+                  id="user"
+                  placeholder="Username"
+                  required
+                />
+              </div>
+              <div class="item">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="pass"
+                  placeholder="Password"
+                  required
+                />
+              </div>
+              <div class="btn">
+                <button type="submit">Sign In</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <div class="watermark">
+        <img src="/public/images/logo2.png" alt="City Wheels watermark" />
+      </div>
+    </div>
+  </body>
+</html>

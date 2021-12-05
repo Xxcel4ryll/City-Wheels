@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #ffffff;
+}
+header .logo-container {
+  width: 120px;
+  height: 120px;
+}
+header .logo-container img {
+  width: 100%;
+}
+header div:nth-child(2) {
+  margin-left: -170px;
+}
+header .site-name h1 {
+  font-size: 2.8rem;
+  font-variant: small-caps;
+  color: rgb(172, 16, 16);
+  text-shadow: 0 1px 2px #000000;
+}
+header .site-name p {
+  font-style: italic;
+  text-align: center;
+  font-size: 0.92rem;
+  margin-left: 6px;
+  word-spacing: 2px;
+  color: rgb(10, 10, 105);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+header .nav-bar ul {
+  display: flex;
+}
+header .nav-bar ul li {
+  list-style: none;
+  font-size: 1.4rem;
+  margin-right: 20px;
+}
+header .nav-bar a {
+  text-decoration: none;
+  color: rgb(10, 10, 105);
+  font-weight: bold;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px 0;
+  position: relative;
+}
+
+main .main-container > div {
+  margin-bottom: 16px;
+}
+main div h2 {
+  font-size: 2.2rem;
+  word-spacing: 2px;
+  color: rgb(10, 10, 105);
+  font-variant: small-caps;
+  text-align: center;
+}
+.watermark {
+  position: absolute;
+  top: 270px;
+  left: 370px;
+  width: 610px;
+  height: 560px;
+  z-index: -1000;
+  opacity: 0.1;
+}
+.watermark img {
+  width: 100%;
+  height: 100%;
+}
+.form-container .image-container {
+  position: absolute;
+  top: 60px;
+  left: 1100px;
+  width: 160px;
+  height: 190px;
+}
+.image-container .image-previewer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+.image-container .image-previewer img {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+.image-container .btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+.btn-container button {
+  padding: 0.3rem 0.4rem;
+  border: 0;
+  background-color: rgb(172, 16, 16);
+  color: #ffffff;
+  outline: 0;
+}
+.btn-container button:hover {
+  background-color: #ffffff;
+  color: #f00;
+  font-weight: bold;
+}
+
+.form-container .section {
+  display: flex;
+  padding: 0.7rem;
+  margin-bottom: 15px;
+}
+.form-container .section div:first-child {
+  margin-right: 50px;
+}
+.form-container label {
+  font-weight: bold;
+}
+.form-container .section input[type='number'],
+input[type='text'],
+input[type='email'],
+input[type='date'],
+input[name='kin-rel'] {
+  width: 260px;
+  height: 35px;
+  border: 0;
+  margin-left: 10px;
+  padding: 0.8rem 0.4rem;
+}
+.form-container .section select {
+  width: 120px;
+  padding: 0.2rem 0.7rem;
+  border: 0;
+  outline: 0;
+}
+.section .address-item input {
+  margin-left: 20px;
+  width: 270px;
+}
+.form-container .section input[type='date'] {
+  width: 243px;
+}
+.form-container .section input[type='email'] {
+  margin-left: 35px;
+  width: 273px;
+}
+.form-container .section input[name='State'] {
+  margin-left: 15px;
+  width: 230px;
+}
+.form-container .section input[name='Phone-number'] {
+  margin-left: 10px;
+  width: 230px;
+}
+.form-container .section input[name='kin-rel'] {
+  width: 535px;
+}
+.form-container .section .radio > label {
+  margin-right: 1.2rem;
+  margin-left: 0.2rem;
+}
+.form-container .section .amt input {
+  width: 272px;
+}
+.form-container .section .check-box {
+  margin-right: 35px;
+}
+.form-container .section .check-box label {
+  padding: 0 0.2rem;
+}
+.form-container .section input:focus {
+  outline: 0;
+}
+.form-container .medical-item {
+  display: flex;
+  align-items: flex-start;
+}
+.form-container .medical-item textarea {
+  outline: none;
+  resize: none;
+  border: none;
+  margin-left: 20px;
+  width: 580px;
+  height: 100px;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+}
+form .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.btn button {
+  width: 150px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.05rem;
+  border: 0;
+  background-color: rgb(172, 16, 16);
+  color: #ffffff;
+  word-spacing: 4px;
+}
+.btn button:hover {
+  background-color: #ffffff;
+  color: rgb(172, 16, 16);
+  font-weight: 700;
+}
+.btn button:focus {
+  outline: 0;
+}
+/* ====== Admin PAnel ===== */
+.admin-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.admin-container form > div {
+  margin-bottom: 30px;
+}
+.admin-container form .item {
+  display: flex;
+  flex-direction: column;
+}
+.admin-container form label {
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+.admin-container form input {
+  width: 300px;
+  height: 30px;
+  margin: 0.3rem 0;
+  padding: 0.5rem;
+  border: 0;
+}
+.admin-container form input:focus {
+  outline: 0;
+}
+.admin-container form .btn {
+  margin-top: -5px;
+}
+/* Student Style */
+.student-data h2 {
+  font-size: 2.2rem;
+  word-spacing: 2px;
+  font-variant: small-caps;
+  text-align: center;
+  margin-top: 20px;
+}
+table {
+  padding: 1rem;
+}
+table th {
+  width: 350px;
+  height: 60px;
+  padding: 0.5rem;
+  font-variant: small-caps;
+  font-size: 1.24rem;
+  border: 1px solid grey;
+}
+table td {
+  padding: 0.7rem;
+  text-align: center;
+  font-size: 1.08rem;
+  border: 1px solid grey;
+}
+table td a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+/* Profile Style */
+.profile-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+}
+.profile-container .reg-heading {
+  display: flex;
+  align-items: center;
+}
+.profile-container .reg-heading h1 {
+  font-size: 2.3rem;
+  font-variant: small-caps;
+  margin-left: 10px;
+  color: rgb(172, 16, 16);
+  text-shadow: 0 1px 2px #000000;
+}
+.profile-container .image-container {
+  position: absolute;
+  top: 140px;
+  left: 470px;
+  width: 170px;
+  height: 200px;
+}
+.profile-container .image-container img {
+  width: 100%;
+  height: 100%;
+}
+.profile-container .student-info {
+  padding: 0.3rem 0.8rem;
+  position: absolute;
+  top: 140px;
+  left: 30px;
+  width: 350px;
+}
+.profile-container .student-info h1 {
+  font-variant: small-caps;
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+}
+.profile-container .student-info p {
+  padding: 0.24rem 0;
+  font-weight: bold;
+}
+.profile-container .student-info span {
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.profile-container .other-info {
+  padding: 0.3rem 0.8rem;
+  position: absolute;
+  top: 395px;
+  left: 30px;
+  width: 350px;
+}
+.profile-container .other-info h1 {
+  font-variant: small-caps;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+.profile-container .other-info p {
+  padding: 0.24rem 0;
+  font-weight: bold;
+}
+.profile-container .other-info span {
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.pdfButton {
+  position: absolute;
+  top: 650px;
+  padding: 1rem;
+}
+.pdfButton #printPdf {
+  padding: 0.5rem 0.9rem;
+}
+.bg-dark {
+  background: #444;
+  color: #ffffff;
+}
+.move-down {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.back-btn {
+  background-color: rgb(10, 10, 105);
+  padding: 0.7rem 1.2rem;
+  border-radius: 9px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease-in;
+}
+.back-btn:hover {
+  background-color: rgb(23, 23, 138);
+}
+@media print {
+  header,
+  #printPdf {
+    display: none;
+  }
+}

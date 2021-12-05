@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <title>City Wheels Driving School</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <img src="/public/images/logo2.png" alt="City wheels logo" />
+        </div>
+        <div class="site-name">
+          <h1>City Wheels Driving School</h1>
+          <p>Federal Road Safety Approved</p>
+        </div>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="/sign-in">SIGN-IN</a></li>
+            <li><a href="/">ENROLL</a></li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <div class="main-container">
+          <div>
+            <h2 class="title-of-job">Student Enrollment Form</h2>
+          </div>
+          <div class="form-container">
+            <form method="POST" action="/signup" id="form-element">
+              <div style="display: none" class="image-container">
+                <div class="image-previewer">
+                  <img src="" alt="" />
+                </div>
+                <input
+                  type="file"
+                  id="default-button"
+                  accept="image/*"
+                  hidden
+                /><br />
+                <div class="btn-container">
+                  <button type="button" id="custom-button" accept="image/*">
+                    Upload Image
+                  </button>
+                </div>
+              </div>
+              <div class="section one">
+                <div class="first-item">
+                  <label for="Firstname">First Name</label>
+                  <input
+                    type="text"
+                    name="firstName"
+                    id="firstname"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+                <div class="last-name-item">
+                  <label for="Lastname">Last Name</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    id="lastname"
+                    placeholder="Last Name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="section">
+                <div class="address-item">
+                  <label for="Address">Address</label>
+                  <input
+                    type="text"
+                    name="address"
+                    id="address-input"
+                    placeholder="Address"
+                    required
+                  />
+                </div>
+                <div class="item">
+                  <label for="Date">Date Of Birth</label>
+                  <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    placeholder="Date of Birth"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="section">
+                <div class="email-item">
+                  <label for="Email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email-input"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="item">
+                  <label for="State">State of Origin</label>
+                  <input
+                    type="text"
+                    name="state"
+                    id="state"
+                    placeholder="State of Origin"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="section">
+                <div class="phone-item">
+                  <label for="Phone-number">Phone Number</label>
+                  <input
+                    type="number"
+                    name="phone"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+                <div class="radio">
+                  <label class="check-box">Gender:</label>
+                  <input
+                    type="radio"
+                    required
+                    name="gender"
+                    id="female"
+                    value="female"
+                  />
+                  <label for="female">Female</label>
+                  <!-- <br> -->
+                  <input
+                    type="radio"
+                    required
+                    name="gender"
+                    id="male"
+                    value="male"
+                  />
+                  <label for="male">Male</label>
+                </div>
+              </div>
+              <div class="section">
+                <label class="check-box">Marital Status: </label>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="maritalStat"
+                    required
+                    id="single"
+                    value="single"
+                  />
+                  <label for="single">Single</label>
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="maritalStat"
+                    required
+                    id="engage"
+                    value="engage"
+                  />
+                  <label for="engage">Engage</label>
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="maritalStat"
+                    required
+                    id="divorce"
+                    value="divorce"
+                  />
+                  <label for="divorce">Divorce</label>
+                </div>
+                <div class="radio">
+                  <input
+                    type="radio"
+                    name="maritalStat"
+                    required
+                    id="married"
+                    value="married"
+                  />
+                  <label for="married">Married</label>
+                </div>
+              </div>
+              <div class="section">
+                <div class="amt-item">
+                  <label for="amount">Amount</label>
+                  <input
+                    type="text"
+                    name="amount"
+                    id="amount"
+                    placeholder="Amount"
+                    required
+                  />
+                </div>
+                <div class="item">
+                  <label for="Kin">Next Of Kin</label>
+                  <input
+                    type="text"
+                    name="kin"
+                    id="kin"
+                    placeholder="Next of Kin"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="section">
+                <div class="relation">
+                  <label for="kin-rel">Relationship to Next of kin</label>
+                  <input
+                    type="text"
+                    name="kinRel"
+                    id="kin-rel"
+                    placeholder="Relationship to Next of kin"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="section">
+                <div class="relation">
+                  <label for="kin-number">Phone Number</label>
+                  <input
+                    type="number"
+                    name="kinNumber"
+                    id="kin-number"
+                    placeholder="Phone Number"
+                    required
+                  />
+                </div>
+                <div class="radio">
+                  <label class="check-box">Training Type:</label>
+                  <input
+                    type="radio"
+                    name="traininType"
+                    id="group"
+                    required
+                    value="group"
+                  />
+                  <label for="group">Group</label>
+                  <input
+                    type="radio"
+                    name="traininType"
+                    id="solo"
+                    required
+                    value="solo"
+                  />
+                  <label for="solo">Solo</label>
+                </div>
+              </div>
+              <div class="section">
+                <label class="check-box">Training Duration: </label>
+                <select name="duration" required id="duration">
+                  <option selected disabled value="">--Choose--</option>
+                  <option name="duration" value="1 Week">1 Week</option>
+                  <option name="duration" value="2 Weeks">2 Weeks</option>
+                  <option name="duration" value="3 Weeks">3 Weeks</option>
+                  <option name="duration" value="4 Weeks">4 Weeks</option>
+                  <option name="duration" value="5 Weeks">5 Weeks</option>
+                  <option name="duration" value="8 Weeks">8 Weeks</option>
+                </select>
+              </div>
+              <div class="section">
+                <div class="radio">
+                  <label class="check-box">Training Categories:</label>
+                  <input
+                    type="radio"
+                    name="trainingCategory"
+                    id="basic"
+                    required
+                    value="basic"
+                  />
+                  <label for="basic">Basic</label>
+                  <input
+                    type="radio"
+                    name="trainingCategory"
+                    id="proficiency"
+                    required
+                    value="proficiency"
+                  />
+                  <label for="proficiency">Proficiency</label>
+                  <input
+                    type="radio"
+                    name="trainingCategory"
+                    id="familiarization"
+                    required
+                    value="familiarization"
+                  />
+                  <label for="familiarization">Familiarization</label>
+                  <input
+                    type="radio"
+                    name="trainingCategory"
+                    id="long-term"
+                    required
+                    value="long-term"
+                  />
+                  <label for="long-term">Long Term</label>
+                </div>
+              </div>
+              <div class="section">
+                <div class="medical-item">
+                  <label for="medical">Medical Condition</label>
+                  <textarea name="medical" required id="medical"></textarea>
+                </div>
+              </div>
+              <div class="btn">
+                <button type="submit">Submit Form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <div class="watermark">
+        <img src="/public/images/logo2.png" alt="City Wheels watermark" />
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // const formElement = document.getElementById('form-element');
+    // const defaultButton = document.getElementById('default-button');
+    // const customButton = document.getElementById('custom-button');
+
+    // customButton.addEventListener('click', () => defaultButton.click());
+    // const imgPreviewer = document.querySelector('.image-previewer');
+    // const img = imgPreviewer.querySelector('img');
+    // defaultButton.addEventListener('change', function () {
+    //   const file = this.files[0];
+    //   if (file) {
+    //     // console.log(file)
+    //     const reader = new FileReader();
+    //     reader.onload = function () {
+    //       img.setAttribute('src', this.result);
+    //     };
+    //     reader.readAsDataURL(file);
+    //     img.style.display = 'block';
+    //   }
+    // });
+  </script>
+</html>

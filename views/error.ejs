@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="public/style.css" />
+    <title>Front End Bootstrap</title>
+  </head>
+  <body class="bg-dark">
+    <nav
+      class="
+        navbar navbar-expand-lg
+        bg-dark
+        navbar-dark
+        pb-2
+        border-bottom border-bottom-3 border-light
+        fixed-top
+      "
+    >
+      <div class="container">
+        <a href="/" class="navbar-brand fs-2">Peace Mass Transit</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#why-peace-mass" class="nav-link text-light"
+                >Why Peace mass?</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#pricing" class="nav-link text-light">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="#reviews" class="nav-link text-light">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a href="/sign-up" class="nav-link text-light">Sign-Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container move-down-special text-center">
+      <div class="h2 text-light"><%= errorCode %></div>
+      <div class="h4 text-light"><%= message %></div>
+    </div>
+  </body>
+</html>

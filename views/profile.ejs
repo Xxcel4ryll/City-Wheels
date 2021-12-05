@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <title>City Wheels Driving School</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <img src="/public/images/logo2.png" alt="City wheels logo" />
+        </div>
+        <div class="site-name">
+          <h1>City Wheels Driving School</h1>
+          <p>Federal Road Safety Approved</p>
+        </div>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="/sign-in">SIGN-IN</a></li>
+            <li><a href="/">ENROLL</a></li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <div class="profile-container" id="printProfile">
+          <div class="reg-heading">
+              <img src="/public/images/logo2.png" alt="" width="110px" height="100px">
+              <h1 class="reg-title">City Wheels Driving School</h1>
+          </div>
+          <div class="image-container">
+              <img src="http://localhost:2021/${result.studentImage}" alt="">
+          </div>
+          <div class="student-info">
+              <h1>Student's Details</h1>
+              <p>Full-Name: <span>${result.firstname} ${result.lastname}</span></p>
+              <p>Gender: <span>${result.gender}</span></p>
+              <p>State: <span>${result.stateOfOrigin}</span></p>
+              <p>Date of Birth: <span>${result.dateOfBirth}</span></p>
+              <p>Phone Number: <span>${result.phone}</span></p>
+              <p>Email: <span>${result.email}</span></p>
+              <p>Address: <span>${result.address}</span></p>
+          </div>
+          <div class="other-info">
+              <h1>Registration Details</h1>
+              <p>Registration ID: <span>${result._id}</span></p>
+              <p>Registration Date: <span>${result.registeredAt}</span></p>
+              <p>Training Type: <span>${result.trainingType}</span></p>
+              <p>Training Category: <span>${result.trainingCategory}</span></p>
+              <p>Training Duration: <span>${result.trainingDuration > 1 ? `${result.trainingDuration} Weeks` : `${result.trainingDuration} Week`}</span></p>
+              <p>Amount: &#8358<span>${result.amount}</span></p>
+          </div>
+      </div>
+      <div class="pdfButton">
+          <button type="button" id="printPdf">Print PDF</button>
+      </div>
+      </main>
+      <div class="watermark">
+        <img src="/public/images/logo2.png" alt="City Wheels watermark" />
+      </div>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

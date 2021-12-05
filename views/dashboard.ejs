@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/style.css" />
+    <title>City Wheels Driving School</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-container">
+          <img src="/public/images/logo2.png" alt="City wheels logo" />
+        </div>
+        <div class="site-name">
+          <h1>City Wheels Driving School</h1>
+          <p>Federal Road Safety Approved</p>
+        </div>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="/sign-in">SIGN-IN</a></li>
+            <li><a href="/">ENROLL</a></li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <section class="student-data">
+          <div class="heading">
+            <h2>Student Bio Information</h2>
+          </div>
+          <table>
+            <th>No of Students</th>
+            <th>Students Name</th>
+            <th>Amount Paid</th>
+            <th>Email Address</th>
+          </table>
+        </section>
+      </main>
+      <div class="watermark">
+        <img src="/public/images/logo2.png" alt="City Wheels watermark" />
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const studentData = document.getElementsByTagName('table')[0];
+    // const studentDetails = JSON.parse(localStorage.getItem("studentInput"));
+    fetch(`http://localhost:2021/users`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json, text/plain, */*',
+      },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        const { rows: data } = response;
+        console.log(data);
+        for (let i = 0; i < data.length; i++) {
+          const studentID = data[i]._id;
+          const name = data[i].firstName;
+          const lastName = data[i].lastName;
+          const amt = data[i].amount;
+          const email = data[i].email;
+
+          studentData.innerHTML += `
+            <tr>
+                    <td>
+                        <a href="/profile/${studentID}">
+                            ${i + 1}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/profile/${studentID}">
+                            ${name} ${lastName}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/profile/${studentID}">
+                           <span>&#8358<span>${amt}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/profile/${studentID}">
+                            ${email}
+                        </a>
+                    </td>
+            </tr>
+            `;
+        }
+      });
+  </script>
+</html>
