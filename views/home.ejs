@@ -29,16 +29,23 @@
             <h2 class="title-of-job">Student Enrollment Form</h2>
           </div>
           <div class="form-container">
-            <form method="POST" action="/signup" id="form-element">
-              <div style="display: none" class="image-container">
+            <form
+              method="POST"
+              enctype="multipart/form-data"
+              action="/signup"
+              id="form-element"
+            >
+              <div class="image-container">
                 <div class="image-previewer">
                   <img src="" alt="" />
                 </div>
                 <input
                   type="file"
                   id="default-button"
-                  accept="image/*"
+                  name="avatar"
                   hidden
+                  required
+                  accept="image/*"
                 /><br />
                 <div class="btn-container">
                   <button type="button" id="custom-button" accept="image/*">
@@ -321,24 +328,24 @@
   </body>
 
   <script>
-    // const formElement = document.getElementById('form-element');
-    // const defaultButton = document.getElementById('default-button');
-    // const customButton = document.getElementById('custom-button');
+    const formElement = document.getElementById('form-element');
+    const defaultButton = document.getElementById('default-button');
+    const customButton = document.getElementById('custom-button');
 
-    // customButton.addEventListener('click', () => defaultButton.click());
-    // const imgPreviewer = document.querySelector('.image-previewer');
-    // const img = imgPreviewer.querySelector('img');
-    // defaultButton.addEventListener('change', function () {
-    //   const file = this.files[0];
-    //   if (file) {
-    //     // console.log(file)
-    //     const reader = new FileReader();
-    //     reader.onload = function () {
-    //       img.setAttribute('src', this.result);
-    //     };
-    //     reader.readAsDataURL(file);
-    //     img.style.display = 'block';
-    //   }
-    // });
+    customButton.addEventListener('click', () => defaultButton.click());
+    const imgPreviewer = document.querySelector('.image-previewer');
+    const img = imgPreviewer.querySelector('img');
+    defaultButton.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        // console.log(file)
+        const reader = new FileReader();
+        reader.onload = function () {
+          img.setAttribute('src', this.result);
+        };
+        reader.readAsDataURL(file);
+        img.style.display = 'block';
+      }
+    });
   </script>
 </html>

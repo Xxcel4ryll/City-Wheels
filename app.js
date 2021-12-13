@@ -3,11 +3,14 @@ const Path = require('path');
 const cookieParser = require('cookie-parser');
 const flash = require('connect-flash');
 const express = require('express');
+const upload = require('./helpers/imageUpload');
+
 // const mysql = require('mysql2');
 const app = express();
 
 // app.use(cors());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.set('view engine', 'ejs');
 app.use('/public', express.static(Path.join(__dirname, 'public')));
 app.use(cookieParser(process.env.COOKIE_SECRET));
@@ -23,6 +26,7 @@ const authRoute = require('./routes/auth.routes');
 app.use(
   '/',
   mainRoute,
+  upload.single('avatar'),
   authRoute,
   authMiddleware({ allowedRoles: ['ADMIN'] }),
   waybillRoute

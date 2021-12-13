@@ -4,23 +4,23 @@ const User = require('../models/user.model');
 module.exports = class {
   static get createSchema() {
     return Joi.object().keys({
-      firstName: Joi.string().required(),
-      lastName: Joi.string().required(),
-      address: Joi.string().required(),
-      date: Joi.date().required(),
-      state: Joi.string().required(),
-      phone: Joi.string().required(),
-      gender: Joi.string().required(),
-      maritalStat: Joi.string().required(),
-      amount: Joi.string().required(),
-      kin: Joi.string().required(),
-      kinRel: Joi.string().required(),
-      kinNumber: Joi.string().required(),
-      traininType: Joi.string().required(),
-      duration: Joi.string().required(),
-      trainingCategory: Joi.string().required(),
-      medical: Joi.string().required(),
-      email: Joi.string().email().required(),
+      firstName: Joi.string(),
+      lastName: Joi.string(),
+      address: Joi.string(),
+      date: Joi.date(),
+      state: Joi.string(),
+      phone: Joi.string(),
+      gender: Joi.string(),
+      maritalStat: Joi.string(),
+      amount: Joi.string(),
+      kin: Joi.string(),
+      kinRel: Joi.string(),
+      kinNumber: Joi.string(),
+      traininType: Joi.string(),
+      duration: Joi.string(),
+      trainingCategory: Joi.string(),
+      medical: Joi.string(),
+      email: Joi.string().email(),
     });
   }
 
@@ -65,9 +65,11 @@ module.exports = class {
 
   // eslint-disable-next-line no-unused-vars
   static async createUser(req, res, next) {
-    req.resource = req.body;
-    next();
     // console.log(req.body);
+    const avatar = req.file.filename;
+    req.resource = { ...req.body, avatar };
+    // console.log(req.resource);
+    next();
   }
 
   static async loginUser(req, res, next) {

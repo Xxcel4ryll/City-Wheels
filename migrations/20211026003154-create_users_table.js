@@ -83,6 +83,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      avatar: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
 
       created_at: {
         type: 'TIMESTAMP',

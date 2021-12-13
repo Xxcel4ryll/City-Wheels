@@ -6,6 +6,7 @@ const jwt = require('../helpers/jwt');
 const _ = require('lodash');
 const paystack = require('paystack-api')(process.env.PAYSTACK_SECRET_KEY);
 const Admin = require('./admin.model');
+
 class User extends Model {
   static async buildUser(req, res) {
     const data = req.resource;
@@ -193,6 +194,10 @@ User.init(
       allowNull: false,
     },
     medical: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    avatar: {
       type: DataTypes.STRING,
       allowNull: false,
     },
