@@ -30,26 +30,26 @@
               <h1 class="reg-title">City Wheels Driving School</h1>
           </div>
           <div class="image-container">
-              <img src="http://localhost:2021/${result.studentImage}" alt="">
+              <img src="data:image/png;base64,<%= student.avatar %>"" alt="">
           </div>
           <div class="student-info">
               <h1>Student's Details</h1>
-              <p>Full-Name: <span>${result.firstname} ${result.lastname}</span></p>
-              <p>Gender: <span>${result.gender}</span></p>
-              <p>State: <span>${result.stateOfOrigin}</span></p>
-              <p>Date of Birth: <span>${result.dateOfBirth}</span></p>
-              <p>Phone Number: <span>${result.phone}</span></p>
-              <p>Email: <span>${result.email}</span></p>
-              <p>Address: <span>${result.address}</span></p>
+              <p>Full-Name: <span><%= student.firstName%> <%= student.lastName%></span></p>
+              <p>Gender: <span><%= student.gender%></span></p>
+              <p>State: <span><%= student.state %></span></p>
+              <p>Date of Birth: <span><%= student.date.toLocaleDateString() %></span></p>
+              <p>Phone Number: <span><%= student.phone %></span></p>
+              <p>Email: <span><%= student.email %></span></p>
+              <p>Address: <span><%= student.address %></span></p>
           </div>
           <div class="other-info">
               <h1>Registration Details</h1>
-              <p>Registration ID: <span>${result._id}</span></p>
-              <p>Registration Date: <span>${result.registeredAt}</span></p>
-              <p>Training Type: <span>${result.trainingType}</span></p>
-              <p>Training Category: <span>${result.trainingCategory}</span></p>
-              <p>Training Duration: <span>${result.trainingDuration > 1 ? `${result.trainingDuration} Weeks` : `${result.trainingDuration} Week`}</span></p>
-              <p>Amount: &#8358<span>${result.amount}</span></p>
+              <p>Registration ID: <span><%= student.id.slice(0, 8)%></span></p>
+              <p>Registration Date: <span><%= student.createdAt.toLocaleDateString()%></span></p>
+              <p>Training Type: <span><%= student.traininType%></span></p>
+              <p>Training Category: <span><%= student.trainingCategory.charAt(0).toUpperCase()%><%=student.trainingCategory.slice(1) %></span></p>
+              <p>Training Duration: <span><%= student.duration  %></span></p>
+              <p>Amount: &#8358<span><%= student.amount%></span></p>
           </div>
       </div>
       <div class="pdfButton">

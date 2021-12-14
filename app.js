@@ -9,8 +9,8 @@ const upload = require('./helpers/imageUpload');
 const app = express();
 
 // app.use(cors());
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+app.use(express.urlencoded({ limit: '50mb', extended: false }));
+app.use(express.json({ limit: '50mb' }));
 app.set('view engine', 'ejs');
 app.use('/public', express.static(Path.join(__dirname, 'public')));
 app.use(cookieParser(process.env.COOKIE_SECRET));

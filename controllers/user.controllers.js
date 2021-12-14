@@ -66,19 +66,13 @@ module.exports = class {
   // eslint-disable-next-line no-unused-vars
   static async createUser(req, res, next) {
     // console.log(req.body);
-    const avatar = req.file.filename;
+    const avatar = req.file.buffer.toString('base64');
     req.resource = { ...req.body, avatar };
-    // console.log(req.resource);
     next();
   }
 
   static async loginUser(req, res, next) {
     req.resource = req.body;
-    next();
-  }
-
-  static async purchase(req, res, next) {
-    req.purchase = req.body;
     next();
   }
 

@@ -45,7 +45,7 @@
   <script>
     const studentData = document.getElementsByTagName('table')[0];
     // const studentDetails = JSON.parse(localStorage.getItem("studentInput"));
-    fetch(`http://localhost:2021/users`, {
+    fetch(`http://localhost:4991/users`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -53,11 +53,11 @@
       },
     })
       .then((res) => res.json())
-      .then((response) => {
-        const { rows: data } = response;
+      .then(async (response) => {
+        const { rows: data } = await response;
         console.log(data);
         for (let i = 0; i < data.length; i++) {
-          const studentID = data[i]._id;
+          const studentID = data[i].id;
           const name = data[i].firstName;
           const lastName = data[i].lastName;
           const amt = data[i].amount;

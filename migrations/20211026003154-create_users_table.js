@@ -84,7 +84,7 @@ module.exports = {
         allowNull: false,
       },
       avatar: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false,
       },
 

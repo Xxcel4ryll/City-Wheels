@@ -296,6 +296,7 @@ table td a {
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;
+  height: 100vh;
 }
 .profile-container .reg-heading {
   display: flex;
@@ -311,7 +312,7 @@ table td a {
 .profile-container .image-container {
   position: absolute;
   top: 140px;
-  left: 470px;
+  left: 400px;
   width: 170px;
   height: 200px;
 }
@@ -361,7 +362,7 @@ table td a {
 }
 .pdfButton {
   position: absolute;
-  top: 650px;
+  top: 600px;
   padding: 1rem;
 }
 .pdfButton #printPdf {

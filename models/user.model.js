@@ -27,7 +27,7 @@ class User extends Model {
         emoji: '&#128549',
       });
     }
-    // res.cookie('user', user);
+    res.cookie('user', user);
     return res.status(201).render('success', {
       message: 'Student Credentials successfully Created',
       emoji: '&#128077',
@@ -66,6 +66,16 @@ class User extends Model {
     // return _.omit({ ...userExist.toJSON(), token }, ['password']);
     res.cookie('user', _.omit({ ...adminExist.toJSON(), token }, ['password']));
     return res.render('dashboard', { message: '' });
+  }
+
+  static async student(req, res) {
+
+    const student = await User.findOne({
+      id: req.params.id,
+    });
+
+    
+    // res.render('profile', { student });
   }
 
   static waybill(req, res) {
@@ -198,8 +208,8 @@ User.init(
       allowNull: false,
     },
     avatar: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
   },
   {
