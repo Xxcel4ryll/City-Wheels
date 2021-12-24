@@ -11,7 +11,6 @@ class User extends Model {
   static async buildUser(req, res) {
     const data = req.resource;
     const { email } = data;
-
     const [user, created] = await User.findOrCreate({
       where: {
         email,
@@ -69,13 +68,13 @@ class User extends Model {
   }
 
   static async student(req, res) {
-
     const student = await User.findOne({
-      id: req.params.id,
+      where: {
+        id: req.params.id,
+      },
     });
 
-    
-    // res.render('profile', { student });
+    res.render('profile', { student });
   }
 
   static waybill(req, res) {

@@ -1,0 +1,47 @@
+<header>
+  <div class="logo-container">
+    <img src="/public/images/logo2.png" alt="City wheels logo" />
+  </div>
+  <div class="site-name">
+    <h1>City Wheels Driving School</h1>
+    <p>Federal Road Safety Approved</p>
+  </div>
+  <div class="nav-bar">
+    <ul>
+      <li><a href="/sign-in" id="sign-in">SIGN-IN</a></li>
+      <li><a href="/" id="sign-in">ENROLL</a></li>
+      <li><a href="" id="dashboard"></a></li>
+    </ul>
+  </div>
+</header>
+<script>
+  if (getCookie('user')) {
+    const signup = document.getElementById('sign-in');
+    const dashboard = document.getElementById('dashboard');
+    dashboard.innerHTML = 'Dashboard';
+    signup.innerHTML = 'Sign-Out';
+    signup.setAttribute('href', '/clearCookies');
+    dashboard.setAttribute('href', '/dashboard');
+    //   signup.innerHTML = "LOG OUT";
+  } else {
+    const signup = document.getElementById('signup');
+    signup.innerHTML = 'SIGN UP';
+    signup.setAttribute('href', '/account');
+  }
+
+  function getCookie(cname) {
+    var name = cname + '=';
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return false;
+  }
+</script>

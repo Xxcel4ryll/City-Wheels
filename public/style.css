@@ -76,7 +76,7 @@ main div h2 {
 .watermark {
   position: absolute;
   top: 270px;
-  left: 370px;
+  left: 390px;
   width: 610px;
   height: 560px;
   z-index: -1000;
@@ -394,5 +394,9 @@ table td a {
   header,
   #printPdf {
     display: none;
+  }
+  .watermark {
+    top: 160px;
+    left: 70px;
   }
 }

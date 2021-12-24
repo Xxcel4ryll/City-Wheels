@@ -8,21 +8,8 @@
   </head>
   <body>
     <div class="container">
-      <header>
-        <div class="logo-container">
-          <img src="/public/images/logo2.png" alt="City wheels logo" />
-        </div>
-        <div class="site-name">
-          <h1>City Wheels Driving School</h1>
-          <p>Federal Road Safety Approved</p>
-        </div>
-        <div class="nav-bar">
-          <ul>
-            <li><a href="/sign-in">SIGN-IN</a></li>
-            <li><a href="/">ENROLL</a></li>
-          </ul>
-        </div>
-      </header>
+      <%- include('./partials/_header.ejs') %>
+
       <main>
         <div class="profile-container" id="printProfile">
           <div class="reg-heading">
@@ -30,7 +17,7 @@
               <h1 class="reg-title">City Wheels Driving School</h1>
           </div>
           <div class="image-container">
-              <img src="data:image/png;base64,<%= student.avatar %>"" alt="">
+              <img src="/<%= student.avatar %>" alt="">
           </div>
           <div class="student-info">
               <h1>Student's Details</h1>
@@ -60,6 +47,12 @@
         <img src="/public/images/logo2.png" alt="City Wheels watermark" />
       </div>
     </div>
-    <script type="module" src="app.js"></script>
+
+    <script>
+      const print = document.getElementById('printPdf');
+      print.addEventListener('click', ()=> {
+        window.print()
+      })
+    </script>
   </body>
 </html>

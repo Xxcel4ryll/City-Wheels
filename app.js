@@ -32,6 +32,11 @@ app.use(
   waybillRoute
 );
 
+app.get('/clearCookies', (req, res) => {
+  res.clearCookie('user');
+  res.redirect('/');
+});
+
 app.use((req, res) =>
   res.render('error', {
     message: 'Oops! The page you requested doesnt exist',

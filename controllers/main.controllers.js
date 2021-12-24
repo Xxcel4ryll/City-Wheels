@@ -14,6 +14,10 @@ class Waybilling {
   static profile(req, res) {
     res.render('profile', { message: '' });
   }
+
+  static clearCookies(req, res) {
+    res.clearCookie('user');
+  }
 }
 
 module.exports = Waybilling;

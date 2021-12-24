@@ -66,7 +66,8 @@ module.exports = class {
   // eslint-disable-next-line no-unused-vars
   static async createUser(req, res, next) {
     // console.log(req.body);
-    const avatar = req.file.buffer.toString('base64');
+    const avatar = req.file.path;
+    // const avatar = req.file.buffer.toString('base64');
     req.resource = { ...req.body, avatar };
     next();
   }

@@ -85,9 +85,8 @@ module.exports = {
       },
       avatar: {
         type: Sequelize.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
-
       created_at: {
         type: 'TIMESTAMP',
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
